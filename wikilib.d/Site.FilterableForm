@@ -1,5 +1,5 @@
 version=pmwiki-2.3.30 ordered=1 urlencoded=1
 author=Petko
 charset=UTF-8
-text=>>frame%3c%3c%0a$[Summary]: Search field to filter tables and lists\\%0a$[Version]: {$xVersion}\\%0a$[Maintainer]: [[https://www.pmwiki.org/petko|Petko]]\\%0a$[Cookbook]: [[(Cookbook:)Filterable]]%0a>>%3c%3c%0a[[#form]]%0aMinimum number of items/rows to enable search box (optional):\\%0a(:input number minsize min=1 step=1:) \\%0a''Default: '''5''' ''%0a%0aQuery selectors for filterable lists and tables (optional): \\%0a(:input text selector size=40:) \\%0a''Default: '''ul.filterable, ol.filterable, table.filterable''' ''%0a%0a[[#formend]]%0a
-time=1708330499
+text=>>frame%3c%3c%0a$[Summary]: Search field to filter tables and lists\\%0a$[Version]: {$ExtVersion}\\%0a$[Maintainer]: [[https://www.pmwiki.org/petko|Petko]]\\%0a$[Cookbook]: [[(Cookbook:)Filterable]]%0a>>%3c%3c%0a[[#form]]%0aMinimum number of items/rows to enable search box (optional):\\%0a(:input number minsize min=1 step=1:) \\%0a''Default: '''5''' ''%0a%0aQuery selectors for filterable lists and tables (optional): \\%0a(:input text selector size=40:) \\%0a''Default: '''ul.filterable, ol.filterable, table.filterable''' ''%0a%0a[[#formend]]%0a
+time=1708419573
