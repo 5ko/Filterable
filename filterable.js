@@ -66,6 +66,8 @@
         searchTag: searchqs,
         contentTag: '[data-jets="content'+makeFilterableCnt+'"]'+tbody
       });
+      
+      list.style.marginTop = '.5em';
     }
   }
   
