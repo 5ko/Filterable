@@ -1,0 +1,16 @@
+>>frame<<
+$[Summary]: Search field to filter tables and lists\\
+$[Version]: {$ExtVersion}\\
+$[Maintainer]: [[https://www.pmwiki.org/petko|Petko]]\\
+$[Cookbook]: [[(Cookbook:)Filterable]]
+>><<
+[[#form]]
+Minimum number of items/rows to enable search box (optional):\\
+(:input number minsize min=1 step=1:) \\
+''Default: '''5''' ''
+
+Query selectors for filterable lists and tables (optional): \\
+(:input text selector size=40:) \\
+''Default: '''ul.filterable, ol.filterable, table.filterable''' ''
+
+[[#formend]]
