@@ -7,7 +7,7 @@
   This extension creates search boxes for large lists and tables.
 */
 
-$RecipeInfo['Filterable']['Version'] = '2024-02-24';
+$RecipeInfo['Filterable']['Version'] = '2024-03-02';
 
 SDVA($Filterable, [
   'selector' => 'ul.filterable, ol.filterable, table.filterable',
@@ -17,7 +17,7 @@ SDVA($Filterable, [
 function initFilterable() {
   global $Filterable;
 
-  $conf = array_merge($Filterable, extGetConfig());
+  $conf = extGetConfig($Filterable);
   
   $dataconf = [
     'selector'   => $conf['selector'],
