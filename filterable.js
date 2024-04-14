@@ -61,12 +61,20 @@
       list.dataset.jets = 'content'+makeFilterableCnt;
       
       var tbody = (list.tagName == 'TABLE')? " tbody": '';
-
-      var x = new Jets({
+      var options = {
         searchTag: searchqs,
         contentTag: '[data-jets="content'+makeFilterableCnt+'"]'+tbody
-      });
-      
+      };
+      if(list.dataset.filtercols) {
+        var cols = list.dataset.filtercols.split(/[^\d]+/g);
+        var optcols = [];
+        for(var ii=0; ii<cols.length; ii++) {
+          var j = parseInt(cols[ii].trim());
+          if(!isNaN(j) && j>=0) optcols.push(j);
+        }
+        if(optcols.length) options.columns = optcols;
+      }
+      var x = new Jets(options);
       list.style.marginTop = '.5em';
     }
   }
