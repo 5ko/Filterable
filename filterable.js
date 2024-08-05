@@ -17,7 +17,28 @@
   
   var makeFilterableCnt = 0;
   function makeFilterable(){
-    var lists = document.querySelectorAll(conf.selector);
+    var lists = [...document.querySelectorAll(conf.selector)];
+    var filterboxes = document.querySelectorAll('input[data-filterbox="1"][data-selector]');
+    for(var i=0; i<filterboxes.length; i++) {
+      var sel = filterboxes[i].dataset.selector;
+      if(!sel) continue;
+      try{
+        var flists = document.querySelectorAll(sel);
+        if(!flists.length) continue;
+      }
+      catch(e) {
+        console.error(e);
+        continue;
+      }
+      filterboxes[i].dataset.fjets = i;
+      var msize = filterboxes[i].dataset.minsize;
+      for(var flist of flists) {
+        flist.dataset.inputfilter = `[data-fjets="${i}"]`;
+        if(msize) flist.dataset.minsize = msize;
+        lists.push(flist);
+      }
+      if(!filterboxes[i].placeholder) filterboxes[i].placeholder = conf.flist;
+    }
     
     for(var i=0; i<lists.length; i++) {
       let list = lists[i];
@@ -37,8 +58,9 @@
         }
       }
       
+      var msize = list.dataset.minsize? parseInt(list.dataset.minsize) : minsize;
       // 1-4 rows/items : no filtering
-      if(items.length<minsize) continue;
+      if(items.length<msize) continue;
       
       if(list.tagName == 'OL') {
         for(var j=0; j<items.length; j++) {
