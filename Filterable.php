@@ -7,7 +7,7 @@
   This extension creates search boxes for large lists and tables.
 */
 
-$RecipeInfo['Filterable']['Version'] = '2024-08-05';
+$RecipeInfo['Filterable']['Version'] = '2024-08-06';
 
 SDVA($Filterable, [
   'selector' => 'ul.filterable, ol.filterable, table.filterable',
@@ -15,8 +15,10 @@ SDVA($Filterable, [
 ]);
 
 SDVA($InputTags['filterbox'], [
-  ':html' => "<input type='search' data-filterbox='1' \$InputFormArgs />",
+  ':html' => "<input type='search' \$InputFormArgs />",
   'class' => 'inputbox noprint',
+  'size' => 30,
+  'data-filterbox' => 1,
   ':args' => ['data-selector', 'data-minsize'],
 ]);
 
