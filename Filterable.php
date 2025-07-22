@@ -40,6 +40,3 @@ function initFilterable() {
 }
 
 initFilterable();
-
-
-
