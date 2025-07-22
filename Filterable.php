@@ -1,13 +1,13 @@
 <?php if (!defined('PmWiki')) exit();
 /**
   Filterable lists and tables for PmWiki
-  Written by (c) Petko Yotov 2020-2024   www.pmwiki.org/petko
+  Written by (c) Petko Yotov 2020-2025   www.pmwiki.org/petko
   License: MIT
   
   This extension creates search boxes for large lists and tables.
 */
 
-$RecipeInfo['Filterable']['Version'] = '2024-08-06';
+$RecipeInfo['Filterable']['Version'] = '2025-07-22';
 
 SDVA($Filterable, [
   'selector' => 'ul.filterable, ol.filterable, table.filterable',
